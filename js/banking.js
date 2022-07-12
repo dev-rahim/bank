@@ -12,13 +12,32 @@ document.getElementById('diposit-button').addEventListener('click', function () 
     document.getElementById('total-balance').innerText = totalBalanceAmmount + ammountOfNewdipositInFlotingNumber;
     // console.log(totalBalanceAmmount + ammountOfNewdipositInFlotingNumber);
 
+    // CLEAR FILD 
+    dipositeInputFild.value = '';
+
 })
 
 
 
 
 // update  withdeow total 
-const widthrowInputFild = document.getElementById('withdrow-fild');
+
 document.getElementById('withdrow-button').addEventListener('click', function () {
-    console.log(widthrowInputFild.value);
+    const widthrowInputFild = document.getElementById('withdrow-fild');
+    const widthrowInputFildText = widthrowInputFild.value;
+    const widthrowAmmount = parseFloat(widthrowInputFildText);
+
+    const previusWithdeowTotalText = document.getElementById('withdrow-total-ammount').innerText;
+    const previusWithdeowTotalFloatNumber = parseFloat(previusWithdeowTotalText);
+
+    document.getElementById('withdrow-total-ammount').innerText = widthrowAmmount + previusWithdeowTotalFloatNumber;
+
+    // UPDATE BALANCE 
+    const totalBalanceText = document.getElementById('total-balance').innerText;
+    const totalBalanceAmmount = parseFloat(totalBalanceText);
+    document.getElementById('total-balance').innerText = totalBalanceAmmount - widthrowAmmount;
+
+    // CLEAR FILD 
+    widthrowInputFild.value = '';
+
 })
