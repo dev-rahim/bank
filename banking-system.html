@@ -19,7 +19,7 @@
             <div class="grid grid-cols-3 gap-4  mt-12">
                 <div class="bg-green-300 p-8 rounded text-white">
                     <h3 class="text-2xl ">Deposite</h3>
-                    <h2 class="text-4xl">$00</h2>
+                    <h2 class="text-4xl">$<span id="diposite-total-ammount">100</span> </h2>
                 </div>
                 <div class="bg-pink-300 p-8 rounded text-white">
                     <h3 class="text-2xl ">Withdrow</h3>
@@ -28,11 +28,12 @@
 
                 <div class="bg-yellow-300 p-8 rounded text-white">
                     <h3 class="text-2xl ">Balance</h3>
-                    <h2 class="text-4xl">$50000</h2>
+                    <h2 class="text-4xl">$<span id="total-balance">4500</span></h2>
                 </div>
             </div>
         </section>
         <section class="grid grid-cols-2 gap-4 mt-6">
+            <!-- Diposite section start -->
             <div class="bg-lime-300 p-8 rounded">
                 <h4 class="text-2xl font-semibold text-white pb-4">Please Diposit</h4>
                 <input id="diposit-fild" class="block rounded w-3/4 px-2 py-1 " type="text"
@@ -40,16 +41,18 @@
                 <button id="diposit-button"
                     class="bg-rose-400 mt-4 font-semibold py-1 px-3 rounded text-white">Diposit</button>
             </div>
+            <!-- withdrow section start  -->
             <div class="bg-indigo-300 p-8 rounded">
                 <h4 class="text-2xl font-semibold text-white pb-4">Please Withdrow</h4>
                 <input id="withdrow-fild" class="block rounded w-3/4 px-2 py-1 " type="text"
-                    placeholder="$Enter Your Amount">
+                    placeholder="$ Enter Your Amount">
                 <button id="withdrow-button"
                     class="bg-rose-400 mt-4 font-semibold py-1 px-3 rounded text-white">Withdrow</button>
             </div>
 
         </section>
     </main>
+    <script src="js/banking.js"></script>
 </body>
 
 </html>
