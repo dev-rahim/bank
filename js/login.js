@@ -9,6 +9,7 @@ loginSubmitButton.addEventListener('click', function () {
         window.location.href = "banking-system.html";
     }
     else {
-        console.log('not valid');
+        alert("email and password not matched");
+        alert("email= rahim@gmail.com password=rahim");
     }
 })
