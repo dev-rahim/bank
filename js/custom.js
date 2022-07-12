@@ -6,7 +6,7 @@ loginSubmitButton.addEventListener('click', function () {
     // console.log('button clicked');
     if (userEmailFild.value == 'rahim@gmail.com' && userPasswordFild.value == 'rahim') {
         // console.log('valid user');
-        location.href = "banking-system.html";
+        window.location.href = "banking-system.html";
     }
     else {
         console.log('not valid');
